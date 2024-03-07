@@ -10,7 +10,7 @@ import {
 import axiosInstance from "../api/axios";
 import { BASE_URL } from "./Banner";
 
-const Row = ({ title, fetchUrl, isLargeRow }) => {
+const Row = ({ title, fetchUrl, isLargeRow, onOpenModal }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {

@@ -5,15 +5,15 @@ import Icon from "react-native-vector-icons/AntDesign";
 const AddWatchListButton = () => {
   return (
     <Pressable>
-      <View style={stlyes.playButton}>
+      <View style={styles.playButton}>
         <Icon name="plus" size={24} color="#fcffff" />
-        <Text style={stlyes.buttonText}>Add Watch</Text>
+        <Text style={styles.buttonText}>Add Watch</Text>
       </View>
     </Pressable>
   );
 };
 
-const stlyes = StyleSheet.create({
+const styles = StyleSheet.create({
   playButton: {
     backgroundColor: "#171717",
     paddingHorizontal: 20,
