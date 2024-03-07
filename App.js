@@ -1,10 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import Banner from "./components/Banner";
+import requests from "./api/requests";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <ScrollView style={styles.ScrollView}>
+        <Banner fetchUrl={requests.fetchNowPlaying} />
+      </ScrollView>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +17,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#171717",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 50,
+  },
+  ScrollView: {
+    width: "100%",
   },
 });
